@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TikTok Viral AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 TikTok Viral AI</h1>
+    <p>Genera idee, script e analizza i tuoi video per renderli virali.</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="ideas">💡 Idee</button>
+    <button class="tab" data-tab="script">📝 Script</button>
+    <button class="tab" data-tab="caption">✍️ Caption</button>
+    <button class="tab" data-tab="analyze">🔍 Analizza Video</button>
+  </nav>
+
+  <main>
+    <!-- Idee -->
+    <section id="ideas" class="panel active">
+      <input id="ideaInput" placeholder="Es: ricette veloci per studenti" />
+      <button onclick="loadIdeas()">Genera 10 idee</button>
+      <div id="ideasOut" class="output"></div>
+    </section>
+
+    <!-- Script -->
+    <section id="script" class="panel">
+      <input id="scriptInput" placeholder="Es: 3 trucchi per studiare meglio" />
+      <button onclick="loadScript()">Genera script</button>
+      <div id="scriptOut" class="output"></div>
+    </section>
+
+    <!-- Caption -->
+    <section id="caption" class="panel">
+      <input id="captionInput" placeholder="Es: palestra per principianti" />
+      <button onclick="loadCaption()">Genera caption</button>
+      <div id="captionOut" class="output"></div>
+    </section>
+
+    <!-- Analizza Video -->
+    <section id="analyze" class="panel">
+      <input type="file" id="videoInput" accept="video/*" />
+      <button onclick="analyzeVideo()">Analizza video</button>
+      <div id="analyzeOut" class="output"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
