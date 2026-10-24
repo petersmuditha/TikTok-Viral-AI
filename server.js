@@ -25,6 +25,11 @@ app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
+// Rotta per la pagina principale
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Upload su disco temporaneo: NON consuma la RAM di Render
 const upload = multer({
   dest: path.join(os.tmpdir(), "tiktok-ai-uploads"),
